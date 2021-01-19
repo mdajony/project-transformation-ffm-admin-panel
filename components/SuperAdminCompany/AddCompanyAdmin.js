@@ -29,7 +29,7 @@ class AddCompanyC extends Component {
     console.log("am in");
     axios
       .get(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/services/list",
+        "/api/v1/field-force/users/superadmin/services/list",
         {
           headers: headers,
         }
@@ -59,7 +59,7 @@ class AddCompanyC extends Component {
 
     axios
       .post(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/company/create",
+        "/api/v1/field-force/users/superadmin/company/create",
         data,
         {
           headers: headers,
@@ -85,7 +85,7 @@ class AddCompanyC extends Component {
         console.log(data2);
         axios
           .post(
-            "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/company/assign-servcie-company",
+            "/api/v1/field-force/users/superadmin/company/assign-servcie-company",
             data2,
             {
               headers: headers,
@@ -101,7 +101,7 @@ class AddCompanyC extends Component {
             };
             axios
               .put(
-                "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/company/update/" +
+                "/api/v1/field-force/users/superadmin/company/update/" +
                   companyid,
                 data3,
                 {

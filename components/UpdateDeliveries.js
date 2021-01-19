@@ -39,7 +39,7 @@ class UpdateDeliveries extends Component {
         const headers = {
             'Authorization': `Bearer ${token}`
         }
-        axios.get(`http://68.183.239.189:30285/api/v1/field-force/delivery/deliveries/get-delivery/${this.props.delivery_data}`, {headers:headers}).then(res => {
+        axios.get(`/api/v1/field-force/delivery/deliveries/get-delivery/${this.props.delivery_data}`, {headers:headers}).then(res => {
             console.log(res.data);
             this.setState({
                 delivery_details: res.data.data.deliveries[0],
@@ -74,7 +74,7 @@ class UpdateDeliveries extends Component {
             client_name:this.state.client_name,
         }
 
-        axios.post(`http://68.183.239.189:30285/api/v1/field-force/delivery/deliveries/update-deliveries/${this.props.delivery_data}`,
+        axios.post(`/api/v1/field-force/delivery/deliveries/update-deliveries/${this.props.delivery_data}`,
                 post_data,
                 {headers:headers}
             ).then(res => {

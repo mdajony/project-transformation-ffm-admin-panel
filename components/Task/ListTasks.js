@@ -21,7 +21,7 @@ class ListTasks extends Component {
             'Authorization': `Bearer ${token}`
         }
 
-        axios.get(`http://68.183.239.189:30286/api/v1/field-force/task/admin-get-tasks/${admin_id}`, {headers:headers}).then(res => {
+        axios.get(`/api/v1/field-force/task/admin-get-tasks/${admin_id}`, {headers:headers}).then(res => {
             this.setState({tasks: res.data.message});
         }).catch(err => {
             console.log(err);

@@ -35,7 +35,7 @@ class UserList extends Component {
     let id = localStorage.getItem("companyId");
     axios
       .get(
-        "http://68.183.239.189:30288/api/v1/field-force/users/admin/user/list/" +
+        "/api/v1/field-force/users/admin/user/list/" +
           id,
         {
           headers: headers,
@@ -61,7 +61,7 @@ class UserList extends Component {
 let id = this.state.deleteItem;
     axios
       .delete(
-        "http://68.183.239.189:30288/api/v1/field-force/users/admin/user/remove/" +
+        "/api/v1/field-force/users/admin/user/remove/" +
           id,
         {
           headers: headers,
@@ -107,7 +107,7 @@ let id = this.state.deleteItem;
     console.log(data);
     axios
       .put(
-        "http://68.183.239.189:30288/api/v1/field-force/users/admin/user/update/" +
+        "/api/v1/field-force/users/admin/user/update/" +
           id,
         data,
         {

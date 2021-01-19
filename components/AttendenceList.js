@@ -27,7 +27,7 @@ class AttendenceList extends Component {
 
     axios
       .get(
-        `http://68.183.239.189:30289/api/v1/field-force/attendence/attendences/admin/attendence-list/${admin_id}`,
+        `/api/v1/field-force/attendence/attendences/admin/attendence-list/${admin_id}`,
         { headers: headers }
       )
       .then((res) => {
@@ -52,7 +52,7 @@ class AttendenceList extends Component {
 
     axios
       .post(
-        `http://68.183.239.189:30289/api/v1/field-force/attendence/attendences/remove-attendence`,
+        `/api/v1/field-force/attendence/attendences/remove-attendence`,
         post_data,
         { headers: headers }
       )

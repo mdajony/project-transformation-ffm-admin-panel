@@ -37,7 +37,7 @@ class updateAdminPassword extends Component {
       if (this.state.newpassword === this.state.confirmPassword) {
         axios
           .put(
-            "http://68.183.239.189:30288/api/v1/field-force/users/admin/update/password-update",
+            "/api/v1/field-force/users/admin/update/password-update",
             data,
             {
               headers: {

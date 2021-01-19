@@ -32,7 +32,7 @@ class CompanyList extends Component {
     console.log("am in");
     axios
       .get(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/company/list",
+        "/api/v1/field-force/users/superadmin/company/list",
         {
           headers: headers,
         }
@@ -51,7 +51,7 @@ class CompanyList extends Component {
    let id =this.state.deleteItem;
     axios
       .delete(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/company/remove/" +
+        "/api/v1/field-force/users/superadmin/company/remove/" +
           id,
         {
           headers: {
@@ -85,7 +85,7 @@ class CompanyList extends Component {
 
     axios
       .put(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/company/update/" +
+        "/api/v1/field-force/users/superadmin/company/update/" +
           id,
         data,
         {

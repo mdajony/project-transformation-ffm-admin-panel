@@ -15,7 +15,7 @@ class ListCompanies extends Component {
         const headers = {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
-        axios.get('http://68.183.239.189:30287/api/v1/field-force/auth/get-company-list', {headers:headers}).then(res => {
+        axios.get('/api/v1/field-force/auth/get-company-list', {headers:headers}).then(res => {
             console.log(res);
             this.setState({companies: res.data});
         }).catch(err => {

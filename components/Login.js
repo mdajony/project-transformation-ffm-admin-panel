@@ -71,7 +71,7 @@ class Login extends Component {
 
     axios
       .post(
-        "http://68.183.239.189:30287/api/v1/field-force/auth/register-dashboard-user",
+        "/api/v1/field-force/auth/register-dashboard-user",
         {
           email: this.state.email,
           password: this.state.password,

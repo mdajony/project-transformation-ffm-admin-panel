@@ -40,7 +40,7 @@ class ListCompanyAdmin extends Component {
 
     axios
       .get(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/list/admin-list",
+        "/api/v1/field-force/users/superadmin/list/admin-list",
         { headers: headers }
       )
       .then((res) => {
@@ -60,7 +60,7 @@ class ListCompanyAdmin extends Component {
     let id = this.state.deleteItem;
     axios
       .delete(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/remove/admin-remove/" +
+        "/api/v1/field-force/users/superadmin/remove/admin-remove/" +
           id,
         { headers: headers }
       )

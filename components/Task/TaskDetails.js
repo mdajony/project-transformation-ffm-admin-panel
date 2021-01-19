@@ -49,7 +49,7 @@ class TaskDetails extends Component {
     };
     axios
       .delete(
-        "http://68.183.239.189:30286/api/v1/field-force/task/admin-delete-tasks/" +
+        "/api/v1/field-force/task/admin-delete-tasks/" +
         admin_id +
           "/" +
           task_id,

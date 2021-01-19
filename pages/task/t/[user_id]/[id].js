@@ -19,7 +19,7 @@ Post.getInitialProps = async function(context) {
         'Authorization': `Bearer ${token}`
     }
 
-    const res = await fetch(`http://68.183.239.189:30286/api/v1/field-force/task/get-task-details/${user_id}/${id}`, {headers: headers});
+    const res = await fetch(`/api/v1/field-force/task/get-task-details/${user_id}/${id}`, {headers: headers});
     const show = await res.json();
     const task_data = show.data[0];
 

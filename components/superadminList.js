@@ -28,7 +28,7 @@ class superadminList extends Component {
 
   let id = localStorage.getItem("userId");
   
-  axios.get('http://68.183.239.189:30288/api/v1/field-force/users/superadmin/list/superadmin-list/'+ id, {headers:headers})
+  axios.get('/api/v1/field-force/users/superadmin/list/superadmin-list/'+ id, {headers:headers})
   .then(res => {
       console.log(res);
       this.setState({superAdmin: res.data.data});
@@ -49,7 +49,7 @@ class superadminList extends Component {
   let id = this.state.deleteItem;
   
   console.log(id);
-    axios.delete('http://68.183.239.189:30288/api/v1/field-force/users/superadmin/remove/'+ id, {headers:headers})
+    axios.delete('/api/v1/field-force/users/superadmin/remove/'+ id, {headers:headers})
     .then(res => {
         console.log(res);
 
@@ -84,7 +84,7 @@ class superadminList extends Component {
     
     if (this.state.password===this.state.confirmPassword){
 
-      axios.put('http://68.183.239.189:30288/api/v1/field-force/users/superadmin/update/password-update', data,{headers:headers})
+      axios.put('/api/v1/field-force/users/superadmin/update/password-update', data,{headers:headers})
       .then(res => {
           console.log(res);
   

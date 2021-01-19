@@ -34,7 +34,7 @@ class AddCompanyC extends Component {
            
         }
 
-        axios.post('http://68.183.239.189:30288/api/v1/field-force/users/superadmin/services/create',
+        axios.post('/api/v1/field-force/users/superadmin/services/create',
                 data,
                 {headers:headers}
             ).then(res => {

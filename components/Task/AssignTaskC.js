@@ -72,7 +72,7 @@ class AssignTaskC extends Component {
             user_id: Number(this.state.user)
         }
         console.log(post_data);
-        axios.post('http://68.183.239.189:30286/api/v1/field-force/task/assign-task',
+        axios.post('/api/v1/field-force/task/assign-task',
                 post_data,
                 {headers:headers}
             ).then(res => {
@@ -113,7 +113,7 @@ class AssignTaskC extends Component {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
         console.log(headers);
-        axios.get(`http://68.183.239.189:30287/api/v1/field-force/auth/get-company-users/${company_id}`, {headers:headers}).then(res => {
+        axios.get(`/api/v1/field-force/auth/get-company-users/${company_id}`, {headers:headers}).then(res => {
             console.log(res.data);
             
             this.setState({company_users: res.data});

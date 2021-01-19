@@ -33,7 +33,7 @@ class Menu extends Component {
     console.log("am in logout");
     axios
       .get(
-        "http://68.183.239.189:30287/api/v1/field-force/auth/logout-dashboard-user",{ headers: {
+        "/api/v1/field-force/auth/logout-dashboard-user",{ headers: {
           'Authorization': `Basic ${localStorage.getItem('token')}`
         }})
       .then((response) => {

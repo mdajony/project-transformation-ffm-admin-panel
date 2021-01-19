@@ -42,7 +42,7 @@ class AttendenceDetails extends Component {
         }
 
         console.log(this.props.attendence_data);
-        axios.get(`http://68.183.239.189:30289/api/v1/field-force/attendence/attendences/get-attendence/${this.props.attendence_data}`, {headers:headers}).then(res => {
+        axios.get(`/api/v1/field-force/attendence/attendences/get-attendence/${this.props.attendence_data}`, {headers:headers}).then(res => {
             console.log(res.data.data);
             this.setState({
                 attendence: res.data.data.attendence[0],
@@ -62,7 +62,7 @@ let data ={
 const headers = {
   Authorization: `Bearer ${localStorage.getItem("token")}`,
 };
-axios.post("http://68.183.239.189:30289/api/v1/field-force/attendence/attendences/remove-attendence",data,
+axios.post("/api/v1/field-force/attendence/attendences/remove-attendence",data,
 { headers: headers }
 ).then(res=>{
 Router.push("/attendence");

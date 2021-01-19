@@ -23,7 +23,7 @@ class CompanyService extends Component {
 
     axios
       .get(
-        "http://68.183.239.189:30288/api/v1/field-force/users/admin/company/service-list/" +
+        "/api/v1/field-force/users/admin/company/service-list/" +
           id,
           {
             headers: headers,

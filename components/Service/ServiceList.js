@@ -27,7 +27,7 @@ class ServiceList extends Component {
     console.log("am in");
     axios
       .get(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/services/list",
+        "/api/v1/field-force/users/superadmin/services/list",
         {
           headers: headers,
         }
@@ -48,7 +48,7 @@ class ServiceList extends Component {
     let id = this.state.deleteItem;
     axios
       .delete(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/services/remove/" +
+        "/api/v1/field-force/users/superadmin/services/remove/" +
           id,
         {
           headers: {
@@ -79,7 +79,7 @@ class ServiceList extends Component {
     };
     axios
       .put(
-        "http://68.183.239.189:30288/api/v1/field-force/users/superadmin/services/update/" +
+        "/api/v1/field-force/users/superadmin/services/update/" +
           id,
         data,
         {

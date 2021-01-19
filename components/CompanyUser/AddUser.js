@@ -69,7 +69,7 @@ class AddUser extends Component {
 
         };
 
-        axios.post('http://68.183.239.189:30287/api/v1/field-force/auth/register-user',
+        axios.post('/api/v1/field-force/auth/register-user',
                 data,{
                   headers:headers
                 }

@@ -26,7 +26,7 @@ class DeliveryList extends Component {
         'Authorization': `Bearer ${token}`
     }
 
-    axios.get(`http://68.183.239.189:30285/api/v1/field-force/delivery/deliveries/admin/delivery-list/${admin_id}`, {headers:headers}).then(res => {
+    axios.get(`/api/v1/field-force/delivery/deliveries/admin/delivery-list/${admin_id}`, {headers:headers}).then(res => {
         console.log(res.data.data);
         this.setState({deliveries: res.data.data});
     }).catch(err => {
@@ -47,7 +47,7 @@ class DeliveryList extends Component {
       user_id:user_id
     }
   
-    axios.post(`http://68.183.239.189:30285/api/v1/field-force/delivery/deliveries/remove-deliveries`,
+    axios.post(`/api/v1/field-force/delivery/deliveries/remove-deliveries`,
                   post_data,
                   {headers:headers}
               ).then(res => {

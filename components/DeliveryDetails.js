@@ -45,7 +45,7 @@ class DeliveryDetails extends Component {
     const headers = {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     };
-    axios.post("http://68.183.239.189:30285/api/v1/field-force/delivery/deliveries/remove-deliveries",data,
+    axios.post("/api/v1/field-force/delivery/deliveries/remove-deliveries",data,
     { headers: headers }
     ).then(res=>{
     Router.push("/deliveries");
@@ -65,7 +65,7 @@ class DeliveryDetails extends Component {
     console.log(this.props.delivery_data);
     axios
       .get(
-        `http://68.183.239.189:30285/api/v1/field-force/delivery/deliveries/get-delivery/${this.props.delivery_data}`,
+        `/api/v1/field-force/delivery/deliveries/get-delivery/${this.props.delivery_data}`,
         { headers: headers }
       )
       .then((res) => {

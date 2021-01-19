@@ -36,7 +36,7 @@ class UpdateAttendence extends Component {
         }
 
 
-        axios.get(`http://68.183.239.189:30289/api/v1/field-force/attendence/attendences/get-attendence/${this.props.attendence_data}`, {headers:headers}).then(res => {
+        axios.get(`/api/v1/field-force/attendence/attendences/get-attendence/${this.props.attendence_data}`, {headers:headers}).then(res => {
             console.log(res.data.data.attendence[0]);
             this.setState({
                 attendence_details: res.data.data.attendence[0],
@@ -72,7 +72,7 @@ class UpdateAttendence extends Component {
             address:this.state.address
         }
 
-        axios.post(`http://68.183.239.189:30289/api/v1/field-force/attendence/attendences/update-attendence/${this.state.attendence_data}`,
+        axios.post(`/api/v1/field-force/attendence/attendences/update-attendence/${this.state.attendence_data}`,
                 post_data,
                 {headers:headers}
             ).then(res => {

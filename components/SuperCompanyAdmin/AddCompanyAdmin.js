@@ -32,7 +32,7 @@ class AddCompanyAdmin extends Component {
 
     axios
       .get(
-        "http://68.183.239.189:30287/api/v1/field-force/auth/get-company-list",
+        "/api/v1/field-force/auth/get-company-list",
         { headers: headers }
       )
       .then((res) => {
@@ -69,7 +69,7 @@ class AddCompanyAdmin extends Component {
 
     axios
       .post(
-        "http://68.183.239.189:30287/api/v1/field-force/auth/register-dashboard-user",
+        "/api/v1/field-force/auth/register-dashboard-user",
         data
       )
       .then((response) => {

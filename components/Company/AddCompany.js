@@ -33,7 +33,7 @@ class AddCompanyC extends Component {
             tin: this.state.tin
         }
 
-        axios.post('http://68.183.239.189:30287/api/v1/field-force/auth/register-company',
+        axios.post('/api/v1/field-force/auth/register-company',
                 post_data,
                 {headers:headers}
             ).then(res => {
