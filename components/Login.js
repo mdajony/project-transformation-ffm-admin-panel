@@ -43,12 +43,8 @@ class Login extends Component {
         }
       )
       .then((response) => {
-
-
         localStorage.setItem("token", response.data.auth_token);
-
         const user = jwt(response.data.auth_token);
-
         console.log(user);
         localStorage.setItem("userId", user.sub);
         localStorage.setItem("username", user.name);
@@ -107,9 +103,14 @@ class Login extends Component {
     return (
       <div>
       <div class="wrapper fadeInDown">
-      <div id="formContent">
-       
-      
+
+        <div style={{padding:'15px'}}>
+          <h2>This is a digital platform, owned by <p style={{fontWeight:'bold'}}>The Tech Serve4 U, LLC</p> 
+            <a href="http://techserve4u.com">http://techserve4u.com</a>
+          </h2>
+        </div>
+     
+        <div id="formContent">
         <div class="fadeIn first header">
           <h3>FFM Admin Panel</h3>
         </div>
@@ -124,14 +125,16 @@ class Login extends Component {
          
           <input type="submit" class="fadeIn fourth inputfield" value="Log In "/>
 
-
-   
         </form>
     
       
    
     
       </div>
+      <h4 style={{marginTop:'40px'}}>
+        <p>Disclaimer:**You are not allowed to distribute, share, or sell this platform, services, and any contents to anyone for selling or public usages.<br/>**Contact for more details:** info@techserve4u.com <br />**Phone:** +1 (586) 834-8526</p>
+      </h4>
+      
     </div>
     </div>
     );
